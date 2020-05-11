@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_margin="10dp"
+        android:outlineProvider="bounds"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:titleTextColor="#292929"
+        app:title="Mi musica" />
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="68dp"
+        sothree:umanoShadowHeight="4dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:background="@color/statusBarColor"
+            android:gravity="center"
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top">
+
+            <include layout="@layout/buttom_music_status"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</LinearLayout>

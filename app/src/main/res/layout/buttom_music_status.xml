@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_none_icon"
+        android:src="@drawable/music_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/artista_name_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Artista desconocido"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="12dp"
+        android:textColor="#818181"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/musica_title"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:maxLines="1"
+        android:text="Titulo"
+        android:textColor="#292929"
+        android:textSize="16dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        tools:ignore="EllipsizeMaxLines,MissingConstraints"
+        tools:layout_editor_absoluteY="-1dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit ="marquee_forever"/>
+
+    <ImageView
+        android:id="@+id/buttomOptions"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_play_arrow" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
